@@ -17,7 +17,8 @@ var encodeUrl = require('encodeurl')
 var escapeHtml = require('escape-html')
 var parseUrl = require('parseurl')
 var resolve = require('path').resolve
-var send = require('send')
+var send = require('send-fs')
+var { loadDirToMemSync } = require('./customize/index')
 var url = require('url')
 
 /**
@@ -46,6 +47,11 @@ function serveStatic (root, options) {
 
   // copy options object
   var opts = Object.create(options || null)
+
+  // 内存模式
+  if (opts.memory) {
+    opts.fs = loadDirToMemSync(root)
+  }
 
   // fall-though
   var fallthrough = opts.fallthrough !== false

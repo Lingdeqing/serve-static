@@ -1,15 +1,18 @@
 {
-  "name": "serve-static",
+  "name": "serve-static-memory",
   "description": "Serve static files",
-  "version": "1.15.0",
+  "version": "1.15.0-beta.2",
   "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
   "license": "MIT",
   "repository": "expressjs/serve-static",
   "dependencies": {
     "encodeurl": "~1.0.2",
     "escape-html": "~1.0.3",
+    "klaw-sync": "^6.0.0",
+    "memfs": "^4.2.0",
     "parseurl": "~1.3.3",
-    "send": "0.18.0"
+    "send": "0.18.0",
+    "send-fs": "0.18.0-beta.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
@@ -27,7 +30,8 @@
   "files": [
     "LICENSE",
     "HISTORY.md",
-    "index.js"
+    "index.js",
+    "customize"
   ],
   "engines": {
     "node": ">= 0.8.0"

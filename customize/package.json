@@ -1,0 +1,21 @@
+{
+  "name": "fs-mem",
+  "version": "0.0.1",
+  "description": "Load directory into memory by memfs",
+  "main": "./index.js",
+  "dependencies": {
+    "klaw-sync": "^6.0.0",
+    "memfs": "^4.2.0"
+  },
+  "keywords": [
+    "memfs",
+    "preload"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lingdeqing/serve-static/customize"
+  },
+  "homepage": "https://github.com/Lingdeqing/serve-static/customize"
+}
